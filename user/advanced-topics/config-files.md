@@ -79,6 +79,19 @@ Also, take a look at [bind-dirs](/doc/bind-dirs) for instructions on how to easi
 GUI and audio configuration in dom0
 -----------------------------------
 
+<div class="alert alert-warning" role="alert">
+  <i class="fa fa-exclamation-triangle"></i>
+  <b>Notice:</b> Since release 4.1 configuration of `qubes-guid` transitioned from `/etc/qubes/guid.conf` to `qvm-features`. Now `/etc/qubes/guid.conf` is used only for option reference. To configure the GUI daemon, use `qvm-features`.
+</div>
+
+
+To change a given GUI option for a specific qube, set the  gui-{option} feature (with underscores replaced with dashes). For example, to enable `allow_utf8_titles` for a qube, set `gui-allow-utf8-titles` to True.
+
+To change a given GUI option  globally,  set  the  `gui-default-{option}` feature on the GuiVM for that qube.
+
+The old way of doing it
+-----------------------
+
 The GUI configuration file `/etc/qubes/guid.conf` in one of a few not managed by `qubes-prefs` or the Qubes Manager tool.
 Sample config (included in default installation):
 
