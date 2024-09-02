@@ -87,8 +87,7 @@ To change a given GUI option for a specific qube, set the  gui-{option} feature 
 
 To change a given GUI option  globally,  set  the  `gui-default-{option}` feature on the GuiVM for that qube.
 
-The old way of doing it
------------------------
+## The old way of doing it
 
 The GUI configuration file `/etc/qubes/guid.conf` in one of a few not managed by `qubes-prefs` or the Qubes Manager tool.
 Sample config (included in default installation):
