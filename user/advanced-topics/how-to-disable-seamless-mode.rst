@@ -46,9 +46,9 @@ Inter-qube clipboard feature relies on :code:`qubes-gui-agent`. It does not work
 Disable seamless mode
 ---------------------
 
-Following procedure of handling seamless mode is nothing more than an example, working with qubes derived from xfce and gnome templates provided by Qubes. Actual workflow can differ depending on your configuration and personal preferences. Be prepared to troubleshoot display manager and X server if something goes wrong.
+Following procedure of handling seamless mode is nothing more than an example, working with qubes derived from Xfce and GNOME templates provided by Qubes. Actual workflow can differ depending on your configuration and personal preferences. Be prepared to troubleshoot display manager and X server if something goes wrong.
 
-Regardless of what qubes you use you also need the desktop environment you want to run installed on the system. This may seem obvious at first, but can turn out out tricky in reality. For example, Fedora 43 template doesn't actually come with Gnome installed, just certain Gnome applications.
+Regardless of what qubes you use you also need the desktop environment you want to run installed on the system. This may seem obvious at first, but can turn out tricky in reality. For example, Fedora 43 template doesn't actually come with GNOME installed, just certain GNOME applications.
 
 You might need to set a user password as most desktop environments are not designed to work without one. Alternatively, you could configure autologin. Consult relevant documentation if you choose to do this instead.
 
@@ -103,7 +103,7 @@ To revert, simply undo relevant configuration changes in dom0 terminal:
 .. |seamless_mode| image:: /attachment/doc/seamless_mode.png
   :alt: Qube applications in seamless mode - qube applications displayed as separate windows in dom0's desktop environment
 .. |non-seamless_mode| image:: /attachment/doc/non-seamless_mode.png
-  :alt: Qube in non-seamless mode - running its own xfce desktop environment
+  :alt: Qube in non-seamless mode - running its own Xfce desktop environment
 
 Troubleshooting
 ---------------
@@ -133,7 +133,7 @@ Make sure you are using a kernel provided by Qubes. Qubes kernel preferences do 
         
 Make sure the operating system of the qube is configured to start a desktop environment.
 
-Check display manager status. Replace :code:`$service` with :code:`lightdm` on xfce and :code:`gdm` on gnome:
+Check display manager status. Replace :code:`$service` with :code:`lightdm` on Xfce and :code:`gdm` on GNOME:
 
 .. code:: console
 
@@ -155,7 +155,7 @@ Try to provision more memory to the qube. Default 400 MiB might not be enough.
 
     [user@dom0 ~]$ qvm-prefs full-desktop-qube memory 1000
 
-LightDM autologin does not work on fedora xfce qubes
+LightDM autologin does not work on fedora Xfce qubes
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 Set a password if you haven't and log in via lightdm graphical interface. Autologin starts working after you log in manually at least once.
